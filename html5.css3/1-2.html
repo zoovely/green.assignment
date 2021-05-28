@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>주문 결제 페이지</title>
 </head>
 <body>
-    
+    <h1>주문/결제</h1>
+    <hr>
+    <form>
+        <h3>배송지 정보</h3>
+        <table>
+            <tr>
+                <td>수령인</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>배송지명</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>연락처1</td>
+                <td>
+                    <select>
+                        <option>010</option>
+                        <option>011</option>
+                        <option>017</option>
+                    </select>
+                    -<input type="text" style="width: 43px;"/>-<input type="text" style="width: 42px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>연락처2</td>
+                <td>
+                    <select>
+                        <option>010</option>
+                        <option>011</option>
+                        <option>017</option>
+                    </select>
+                    -<input type="text" style="width: 43px;"/>-<input type="text" style="width: 42px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">주소</td>
+                <td>
+                    <input disabled="disabled" style="width: 80px;"/>
+                    <input type="button" value="우편번호"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>배송메모</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+        </table>
+    </form>
+
 </body>
 </html>
