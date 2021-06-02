@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 메인 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <!--초기화-->
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: 'Nanum Myeongjo', serif;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        img {border: none;}
+    </style>
+    <!--헤더-->
+    <style>
+        #header {
+            width: 960px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        #nav {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+        #nav>span {
+            text-align: center;
+            margin: 10px;
+        }
+        #nav>span:hover {
+            font-weight: bold;
+        }
+        #nav>span:last-child>input:first-child {
+            width: 70px;
+        }
+    </style>
+    <!--카테고리-->
+    <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+        }
+        #aside {
+            float: left;
+            border: 1px solid black;
+            padding: 20px;
+            width: 100px;
+        }
+        .item{
+            padding: 5px;
+        }
+        .item li {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>쇼핑몰</h1>
+        <div id="nav">
+                <span>Login</span>
+                <span>Join</span>
+                <span>Cart</span>
+                <span>My Page</span>
+                <span>
+                    <input type="text"/>
+                    <input type="button" value="검색"/>
+                </span>
+        </div>
+    </div>
+    <div id="content">
+        <div id="aside">
+            <ul>
+                <li class="item">
+                    <ul><b>Top</b>
+                        <li>Tee</li>
+                        <li>Knit</li>
+                        <li>Shirt</li>
+                        <li>Outer</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <ul><b>Bottom</b>
+                        <li>Skirt</li>
+                        <li>Pants</li>
+                    </ul>
+                </li>
+                <li class="item"><b>Dress</b></li>
+                <li class="item">
+                    <ul><b>ACC</b>
+                        <li>Hair</li>
+                        <li>Jewelry</li>
+                        <li>Bag</li>
+                        <li>Shoes</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="section">
+            <div class="article">
+                <h3>Best</h3>
+            </div>
+            <div class="article">
+                <h3>New</h3>
+            </div>
+            <div class="article">
+                <h3>Recommend</h3>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <ul>
+            <li><h3>CS Center</h3></li>
+            <li><h3>Bank Info</h3></li>
+            <li><h3>Return</h3></li>
+            <li><h3>Policy</h3></li>
+        </ul>
+    </div>
+</body>
+</html>
