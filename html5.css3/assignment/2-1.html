@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My diary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <style>
+        html {background-color: rgb(191, 213, 253);}
+        body {width: 1000px; margin: 0 auto; font-family:'Song Myung',cursive; color: white;}
+        h1 {text-align: center; 
+            color:rgb(255, 255, 255);}
+        #img {width: 500px; float: left; text-align: center;}
+        #img img {width: 300px; height: 290px; margin-left: 30px;}
+        #txt {float:left; width:500px; height:300px; text-align: center; color: white;}
+        #txt img {width: 50px; height: 50px; margin:10px; filter: invert(100);}
+        ul {list-style: none; margin-top: 50px;}
+        #new {text-align: center;}
+        textarea {width: 500px; height: 200px; border: 1px solid rgb(134, 172, 243);}
+        input {background-color: rgb(134, 172, 243); color: white; border: none;}
+        #diary {text-align: center; overflow: hidden;}
+        .memo {width: 200px; height: 200px; background-color: rgb(134, 172, 243); padding: 30px; margin: 10px; display: inline-block;}
+        #top {width: 100px; height: 100px; background-color: rgb(212, 212, 212); border-radius: 10px; padding: 10px; text-align: center;}
+        #top a {line-height: 100px;}
+    </style>
+    <!--filter 속성은 검색하여 사용-->
 </head>
 <body>
-    
+    <div id="profile">
+        <h1>Who I am?</h1>
+        <div id="img">
+            <img src="./source/me.png"/>
+        </div>
+        <div id="txt">
+            <ul>
+                <li>
+                    <a href="#"><img src="./source/call.png"/></a>
+                    <a href="https://www.instagram.com/zoovely__/"><img src="./source/insta.png"/></a>
+                    <a href="https://github.com/zoovely"><img src="./source/git.png"/></a>
+                </li>
+                <li>name : Joo So Yeon</li>
+                <li>nickname : Zoovely</li>
+                <li>birth : 1998/06/30</li>
+                <li>live in : Gimpo</li>
+                <li>major : Applied Computer Engineering</li>
+                <li>hobby : Watching movie</li>
+                <li>favorite color : Sky Blue</li>
+            </ul>
+        </div>
+    </div>
+    <div id="new">
+        <h1>How was my day?</h1>
+        <textarea></textarea> <br>
+        <input type="submit" value="post"/>
+    </div>
+    <div id="diary">
+        <h1>My days</h1>
+        <div class="search">
+            <input type="date"/>
+            <input type="submit" value="search"/>
+        </div>
+        <div class="search">
+            <div class="memo">
+                <h3>06/01</h3>
+                <p>오늘은 화요일이다. 즐거운 하루였다. 수업 듣는 건 힘들지만 보람차다. 배우는 것도 재미있다.</p>
+            </div>
+            <div class="memo">
+                <h3>05/31</h3>
+                <p>월요일이라 힘이 없다. 날씨가 좋다. 통학하는 길이 매우 멀게 느껴진다. 벌써 배고프다.</p>
+            </div>
+            <div class="memo">
+                <h3>05/30</h3>
+                <p>즐거운 일요일! 하루가 빨리 간다. 오늘은 데이트를 했다. 일주일을 또 기다려야 한다.</p>
+            </div>
+        </div>
+    </div>
+    <div id="top">
+        <a href="#profile">▲ Top</a>
+    </div>
+    <br>
 </body>
 </html>
