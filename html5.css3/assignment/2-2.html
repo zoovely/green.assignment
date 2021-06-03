@@ -37,24 +37,84 @@
         #nav>span:last-child>input:first-child {
             width: 70px;
         }
+        #nav>span:last-child>input:last-child {
+            border: none;
+            background: none;
+        }
     </style>
     <!--카테고리-->
     <style>
         #content {
             width: 960px;
             margin: 0 auto;
+            overflow: hidden;
         }
         #aside {
             float: left;
-            border: 1px solid black;
             padding: 20px;
             width: 100px;
+            position: fixed;
         }
         .item{
             padding: 5px;
         }
         .item li {
             margin-left: 20px;
+        }
+        .item li:hover {
+            font-style: oblique;
+        }
+    </style>
+    <!--섹션-->
+    <style>
+        #section {
+            text-align: center;
+            margin-left: 130px;
+        }
+        .article {
+            margin-bottom: 30px;
+            overflow: hidden;
+            padding-left: 60px;
+        }
+        .article img {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .photo {
+            float: left;
+        }
+        .photo img:hover {
+            opacity: 0.5;
+        }
+        #section p {
+            font-size: 13px;
+        }
+    </style>
+    <!--푸터-->
+    <style>
+        #footer {
+            width: 960px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-top: 1px solid grey;
+            padding: 10px;
+            padding-left: 130px;
+        }
+        #footer div {
+            float: left;
+            width: 200px;
+            padding: 5px 10px 10px 10px;
+            border-right: 1px solid grey;
+        }
+        #footer div:last-child {
+            border: none;
+        }
+        #footer p {
+            font-size: 12px;
+        }
+        #footer div:last-child p:hover{
+            font-weight: bold;
         }
     </style>
 </head>
@@ -101,24 +161,98 @@
             </ul>
         </div>
         <div id="section">
+            <h3>Best</h3>
             <div class="article">
-                <h3>Best</h3>
+                <div class="photo">
+                    <img src="./source/dress.jpg"/>
+                    <p>백설공주 드레스</p>
+                    <p>1,365,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/pants.jpg"/>
+                    <p>그린 슬랙스</p>
+                    <p>58,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/shirts.jpg"/>
+                    <p>블랙 반팔 티셔츠</p>
+                    <p>3,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/skirt.jpg"/>
+                    <p>체크 테니스 스커트</p>
+                    <p>237,000</p>
+                </div>
             </div>
+            <h3>New</h3>
             <div class="article">
-                <h3>New</h3>
+                <div class="photo">
+                    <img src="./source/earing.jpg"/>
+                    <p>튤립 로즈골드 드롭 귀걸이</p>
+                    <p>538,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/shirt.jpg"/>
+                    <p>베이직 옥스포드 셔츠</p>
+                    <p>43,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/shoes.jpg"/>
+                    <p>레드 에나멜 펌프스</p>
+                    <p>32,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/bag.jpg"/>
+                    <p>큐드 레더 백팩</p>
+                    <p>195,000</p>
+                </div>
             </div>
+            <h3>Recommend</h3>
             <div class="article">
-                <h3>Recommend</h3>
-            </div>
+                <div class="photo">
+                    <img src="./source/jacket.jpg"/>
+                    <p>양털 플라이어 자켓</p>
+                    <p>126,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/jean.png"/>
+                    <p>라이트 블루 진</p>
+                    <p>77,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/hair.jpg"/>
+                    <p>백설공주 머리띠</p>
+                    <p>2,000</p>
+                </div>
+                <div class="photo">
+                    <img src="./source/knit.jpg"/>
+                    <p>랄프로렌 니트</p> 
+                    <p>100,400</p>
+                </div>
+            </div>  
         </div>
     </div>
     <div id="footer">
-        <ul>
-            <li><h3>CS Center</h3></li>
-            <li><h3>Bank Info</h3></li>
-            <li><h3>Return</h3></li>
-            <li><h3>Policy</h3></li>
-        </ul>
+        <div>
+            <h3>CS Center</h3> <br>
+            <p>010-7561-6175</p>
+            <p>10am - 10pm</p>
+        </div>
+        <div>
+            <h3>Bank Info</h3> <br>
+            <p>우리 1002-656-592475</p>
+            <p>예금주 주소연</p>
+        </div>
+        <div>
+            <h3>Return</h3> <br>
+            <p>경기도 김포시 북변1로</p>
+            <p>대한통운 : 1588-1255</p>
+        </div>
+        <div>
+            <h3>Policy</h3> <br>
+            <p>이용약관</p>
+            <p>개인정보정책</p>
+        </div>
     </div>
 </body>
 </html>

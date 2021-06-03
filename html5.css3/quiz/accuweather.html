@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전국 현재 날씨 | Accuweather</title>
+    <!--초기화-->
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: sans-serif;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+        img {border: 0;}
+    </style>
+    <!--헤더-->
+    <style>
+        #header {
+            height: 350px;
+            background-image: url('../assignment/source/b.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        #header img {
+            height: 30px;
+        }
+        #nav ul {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #nav li {
+            float: left;
+            padding: 10px;
+        }
+        #nav li:last-child {
+            float: right;
+        }
+        #nav li:nth-child(1) ~ li {
+            color: white;
+            margin-top: 5px;
+        }
+        #search {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="nav">
+            <ul>
+                <li><img src="../assignment/source/accu.png"/></li>
+                <li>레이더 및 지도</li>
+                <li>동영상</li>
+                <li>악천후 기상</li>
+                <li><img src="../assignment/source/option.png"></li>
+            </ul>
+        </div>
+        <div id="search">
+            <input type="text" placeholder="위치 검색"/>
+            <div>
+                <p>종로1.2.3.4가동.대한민국 20ºC</p>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="section">
+            <div class="article"></div>
+        </div>
+        <div id="aside"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
