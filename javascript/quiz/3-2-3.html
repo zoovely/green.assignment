@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 3번</title>
+    <script>
+        var grade = prompt("학년을 입력하세요.","1");
+        var score = prompt("점수를 입력하세요.","0");
+        if (100>=score&&score>=0) {
+            if ((grade==4 && score>=70)||(grade!=4 && score>=60)) {
+                document.write("합격");
+            }
+            else {
+                document.write("불합격");
+            }
+        }
+        else {
+            alert("에러입니다.");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

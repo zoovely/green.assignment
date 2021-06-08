@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 6번</title>
+    <script>
+        var a = prompt("첫번째 정수를 입력하세요.","0");
+        var b = prompt("두번째 정수를 입력하세요.","0");
+        var c = prompt("세번째 정수를 입력하세요.","0");
+        var sum = Number(a)+Number(b)+Number(c);
+        var avg = sum/3;
+
+        if(a>b&&a>c) {
+            if(b>c) {
+                document.write("최대값:"+a+"<br>최소값:"+c)
+            }
+            else {
+                document.write("최대값:"+a+"<br>최소값:"+b)
+            }
+        }
+        else if(b>a&&b>c) {
+            if(a>c) {
+                document.write("최대값:"+b+"<br>최소값:"+c)
+            }
+            else {
+                document.write("최대값:"+b+"<br>최소값:"+a)
+            }
+        }
+        else {
+            if(a>b) {
+                document.write("최대값:"+c+"<br>최소값:"+b)
+            }
+            else {
+                document.write("최대값:"+c+"<br>최소값:"+a)
+            }
+        }
+        document.write("<br>합계:"+sum+"<br>평균:"+avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

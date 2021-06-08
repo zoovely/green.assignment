@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 보너스 문제</title>
+    <script>
+        var money = prompt("돈을 입력하세요.","0");
+        var item = prompt("과자를 입력하세요.","");
+        var a = "허니버터";
+        var b = "칸쵸";
+        var c = "프링글스";
+
+        if(item!=a&&item!=b&&item!=c) {
+                alert("없는 상품입니다.");
+                location.reload();
+        }
+        else if(money>0) {
+            if(money>=1300&&item==a) {
+                document.write("허니버터가 나왔습니다. 거스름돈은 "+(money-1300)+"원입니다.");
+            }
+            else if(money>=1500&&item==b) {
+                document.write("칸쵸가 나왔습니다. 거스름돈은 "+(money-1500)+"원입니다.");
+            }
+            else if(money>=3000&&item==c) {
+                document.write("프링글스가 나왔습니다. 거스름돈은 "+(money-3000)+"원입니다.");
+            }
+            else {
+                alert("돈이 부족합니다.");
+                location.reload();
+            }
+        }
+        else {
+            alert("돈을 넣어주세요.");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
