@@ -6,35 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조건문 보너스 문제</title>
     <script>
-        var money = prompt("돈을 입력하세요.","0");
         var item = prompt("과자를 입력하세요.","");
-        var a = "허니버터";
-        var b = "칸쵸";
-        var c = "프링글스";
+        var money = prompt("돈을 입력하세요.","0");
+        var arr = ["허니버터","칸쵸","프링글스"];
+        var arr2 = [1300, 1500, 3000];
+        var choice;
+        var change;
 
-        if(item!=a&&item!=b&&item!=c) {
-                alert("없는 상품입니다.");
-                location.reload();
+        if(money==0) {
+            alert("돈을 넣어주세요.");
+            location.reload();
         }
-        else if(money>0) {
-            if(money>=1300&&item==a) {
-                document.write("허니버터가 나왔습니다. 거스름돈은 "+(money-1300)+"원입니다.");
+        else {
+            for(i in arr) {
+                if(item==arr[i]) {
+                    choice=arr[i];
+                    change=money-arr2[i];
+                }
             }
-            else if(money>=1500&&item==b) {
-                document.write("칸쵸가 나왔습니다. 거스름돈은 "+(money-1500)+"원입니다.");
-            }
-            else if(money>=3000&&item==c) {
-                document.write("프링글스가 나왔습니다. 거스름돈은 "+(money-3000)+"원입니다.");
+            if(change>=0) {
+                if(choice) {
+                    document.write(choice+"가 나왔습니다. 거스름돈은 "+money+"원입니다.");
+                }
+                else {
+                    alert("없는 상품입니다.");
+                    location.reload();
+                }
             }
             else {
                 alert("돈이 부족합니다.");
                 location.reload();
             }
         }
-        else {
-            alert("돈을 넣어주세요.");
-            location.reload();
-        }
+        
+        
+
+        // var a = "허니버터",
+        // b = "칸쵸",
+        // c = "프링글스";
+        // if(item!=a&&item!=b&&item!=c) {
+        //         alert("없는 상품입니다.");
+        //         location.reload();
+        // }
+        // else if(money>0) {
+        //     if(money>=1300&&item==a) {
+        //         document.write("허니버터가 나왔습니다. 거스름돈은 "+(money-1300)+"원입니다.");
+        //     }
+        //     else if(money>=1500&&item==b) {
+        //         document.write("칸쵸가 나왔습니다. 거스름돈은 "+(money-1500)+"원입니다.");
+        //     }
+        //     else if(money>=3000&&item==c) {
+        //         document.write("프링글스가 나왔습니다. 거스름돈은 "+(money-3000)+"원입니다.");
+        //     }
+        //     else {
+        //         alert("돈이 부족합니다.");
+        //         location.reload();
+        //     }
+        // }
+        // else {
+        //     alert("돈을 넣어주세요.");
+        //     location.reload();
+        // }
     </script>
 </head>
 <body>
