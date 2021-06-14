@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 예보 프로그램</title>
+    <script>
+        var date = ["21/03/22", "21/03/23", "21/03/24", "21/03/25"];
+        var degree = [10.2, 14.3, 17.2, 18.0];
+        var rain = [10, 50, 10, 5];
+        var dust = [40, 60, 70, 90];
+        
+        var num = 0;
+        var userNum = prompt("어느 날짜의 날씨 예보를 보시겠습니까?","21/03/22");
+        for(var i=0; i<date.length; i++) {
+            if(userNum==date[i]) {
+                num = i;
+            }
+        }
+
+        function showDegree(a) {
+            document.write(degree[a]);
+        }
+        function showRain(a) {
+            document.write(rain[a]);
+        }
+        function showDust(a) {
+            document.write(dust[a]);
+        }
+        function showAvgDegree() {
+            var sum = 0;
+            for(var i=0;i<degree.length;i++) {
+                sum += degree[i];
+            }
+            document.write(sum/4);
+        }
+        function showAvgRain() {
+            var sum = 0;
+            for(var i=0;i<rain.length;i++) {
+                sum += rain[i];
+            }
+            document.write(sum/4);
+        }
+        function showAvgDust() {
+            var sum = 0;
+            for(var i=0;i<dust.length;i++) {
+                sum += dust[i];
+            }
+            document.write(sum/4);
+        }
+
+        document.write(userNum+"의 기온은 ");
+        showDegree(num);
+        document.write("도 입니다.<br>");
+        document.write("강수량은 ");
+        showRain(num)
+        document.write("mm입니다.<br>");
+        document.write("미세먼지 수치는 ");
+        showDust(num)
+        document.write("㎍/m 입니다.<br>");
+        document.write("평균 기온은 ");
+        showAvgDegree()
+        document.write("도 입니다.<br>");
+        document.write("평균 강수량은 ");
+        showAvgRain()
+        document.write("mm입니다.<br>");
+        document.write("평균 미세먼지 수치는 ");
+        showAvgDust()
+        document.write("㎍/m 입니다.<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
