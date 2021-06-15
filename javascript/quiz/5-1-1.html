@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기 문제 함수화</title>
+    <script>
+        var item = prompt("과자를 입력하세요.","");
+        var money = prompt("돈을 입력하세요.","0");
+        var arr = ["허니버터","칸쵸","프링글스"];
+        var arr2 = [1300, 1500, 3000];
+        var choice = "";
+        var change = 0;
+        var nomoney = 0;
+
+        function moneyCheck() {
+            if(money==0) {
+                nomoney = 1;
+                alert("돈을 넣어주세요.");
+                location.reload();
+            }
+        }
+
+        function exchange() {
+            for(i in arr) {
+                if(item==arr[i] && money>0) {
+                    choice=arr[i];
+                    change=money-arr2[i];
+                }
+            }
+            if(change<0) {
+                alert("돈이 부족합니다.");
+                location.reload();
+            }
+        }
+
+        function itemCheck() {
+            if(choice) {
+                document.write(choice+"가 나왔습니다. 거스름돈은 "+change+"원입니다.");
+            }
+            else if(nomoney == 0) {
+                alert("없는 상품입니다.");
+                location.reload();
+            }
+        }
+
+        moneyCheck();
+        exchange();
+        itemCheck();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
