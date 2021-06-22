@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기 문제</title>
+</head>
+<body>
+    <div id="money_box">
+        <input type="text" id="money" placeholder="금액을 입력하세요.">
+        <input type="submit" id="enter" value="돈 넣기">
+    </div> <br>
+    <div id="item_box">
+        <button id="btn1" value="허니버터">허니버터 (1300원)</button>
+        <button id="btn2" value="칸쵸">칸쵸 (1500원)</button>
+        <button id="btn3" value="프링글스">프링글스 (3000원)</button>
+    </div> <br>
+    <span id="txt"></span>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            var user_money;
+            var exchange = function(item_price, item_name) {
+                if(user_money) {
+                    user_money = user_money - item_price;
+                    if(user_money < 0) {
+                        alert("돈이 부족합니다.");
+                        location.reload();
+                        return;
+                    }
+                    $("#txt").text(item_name+"가 나왔습니다! 거스름돈은 "+user_money+"원 입니다.");
+                }
+                else {
+                    alert("돈을 넣어주세요.");
+                }
+            };
+
+            $("#enter").click(function() {
+                user_money = $("#money").val();
+            });
+            $("#btn1").click(function() {
+                exchange(1300, $("#btn1").val());
+            });
+            $("#btn2").click(function() {
+                exchange(1500, $("#btn2").val());
+            });
+            $("#btn3").click(function() {
+                exchange(3000, $("#btn3").val());
+            });
+        });
+    </script>
+</body>
+</html>
