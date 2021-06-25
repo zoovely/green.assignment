@@ -12,18 +12,16 @@
         <li>Mongodb Tutorial</li>
         <li>Python Tutorial</li>
     </ul>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="./jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $("li").each(function(i) {
-                var a = $(this).text()
-                $(this).text(i+": "+a);
-            });
+            console.log($("li:eq(1)").text());
         });
 
-        // $('li').each(function(index, elem) {
-        //     $(elem).prepend(''+index+": ");
-        // })
+        // var listItems = $('li');
+        // var rawListItems = listItems(1);
+        // var html = rawListItems.innerHTML;
+        // console.log(html);
     </script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+        }
+        p {
+            width: 200px;
+            margin-top: 20px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: red;"></div>
+    <div style="background-color: rgb(16,99,30);"></div>
+    <div style="background-color: #523456;"></div>
+    <div style="background-color: #a11;"></div>
+    <p></p>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("div").on("click", function() {
+                var a = $(this).css("background-color");
+                //어떤 방식으로 색상을 입력했든 rgb코드로 뽑아옴
+                $("p").text("해당 색상: "+a);
+            });
+        });
+    </script>
+</body>
+</html>

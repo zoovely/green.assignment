@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 75px; width: 200px; padding: 10px; margin: 3px; border: 1px solid black; background: cadetblue;"></div>
+    <p></p>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $("p").text("Left: " + $("div").offset().left + ", Top: " + $("div").offset().top); 
+        //브라우저 기준 위치
+        // $("p").text("Left: " + $("div").position().left + ", Top: " + $("div").position().top);
+        //부모태그 기준 위치
+    </script>
+</body>
+</html>

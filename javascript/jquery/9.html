@@ -7,23 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li>Html Tutorial</li>
-        <li>Mongodb Tutorial</li>
-        <li>Python Tutorial</li>
-    </ul>
+    <input type="text"/>
     <script src="jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $("li").each(function(i) {
-                var a = $(this).text()
-                $(this).text(i+": "+a);
+            $("input").keyup(function() {
+                console.log($("input").val());
             });
         });
-
-        // $('li').each(function(index, elem) {
-        //     $(elem).prepend(''+index+": ");
-        // })
     </script>
 </body>
 </html>

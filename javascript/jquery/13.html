@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 10px;
+            font-size: 22px;
+        }
+        .myclass {
+            color: #FA5858;
+        }
+        .highlight {
+            background: #CEF6F5;
+        }
+    </style>
+</head>
+<body>
+    <p>jQuery Exercise</p>
+    <p>and Solution</p>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $("p:eq(0)").addClass("highlight");
+        $("p:eq(1)").addClass("myclass");
+    </script>
+</body>
+</html>
